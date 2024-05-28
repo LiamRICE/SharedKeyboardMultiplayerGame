@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://yeeauou6sjpa"]
+
+[ext_resource type="PackedScene" uid="uid://5vbnj77httha" path="res://scenes/objects/static_object.tscn" id="1_ay8fe"]
+[ext_resource type="Script" path="res://scripts/metal.gd" id="2_mwmbe"]
+[ext_resource type="Texture2D" uid="uid://dfisadt03j7k2" path="res://graphics/terrain/metal.png" id="2_oqodl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d4dv8"]
+size = Vector2(32, 32)
+
+[node name="Metal" instance=ExtResource("1_ay8fe")]
+script = ExtResource("2_mwmbe")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_oqodl")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_d4dv8")

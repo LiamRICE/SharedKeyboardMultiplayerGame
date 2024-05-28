@@ -1,0 +1,114 @@
+[gd_scene load_steps=3 format=3 uid="uid://j3tiecpm8s0m"]
+
+[ext_resource type="PackedScene" uid="uid://yeeauou6sjpa" path="res://scenes/objects/metal.tscn" id="1_3sqdx"]
+[ext_resource type="PackedScene" uid="uid://cxcmhf6oqge8h" path="res://scenes/objects/wood.tscn" id="2_cb58l"]
+
+[node name="Platform_Shape_1" type="Node2D"]
+
+[node name="Metal9" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(-144, 112)
+
+[node name="Metal10" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(-112, 112)
+
+[node name="Metal11" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(-80, 112)
+
+[node name="Metal12" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(-48, 112)
+
+[node name="Metal13" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(-16, 112)
+
+[node name="Metal16" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(-16, 80)
+
+[node name="Metal17" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(-16, 48)
+
+[node name="Metal18" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(-16, 16)
+
+[node name="Metal19" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(-16, -16)
+
+[node name="Metal20" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(-16, -48)
+
+[node name="Metal21" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(-16, -80)
+
+[node name="Metal29" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(-16, -112)
+
+[node name="Metal30" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(-16, -144)
+
+[node name="Metal22" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(16, -144)
+
+[node name="Metal23" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(48, -144)
+
+[node name="Metal24" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(80, -144)
+
+[node name="Metal14" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(16, 112)
+
+[node name="Metal15" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(48, 112)
+
+[node name="Metal25" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(80, 112)
+
+[node name="Metal26" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(112, 112)
+
+[node name="Metal27" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(144, 112)
+
+[node name="Metal28" parent="." instance=ExtResource("1_3sqdx")]
+position = Vector2(176, 112)
+
+[node name="Wood" parent="." instance=ExtResource("2_cb58l")]
+position = Vector2(16, 80)
+
+[node name="Wood2" parent="." instance=ExtResource("2_cb58l")]
+position = Vector2(48, 80)
+
+[node name="Wood3" parent="." instance=ExtResource("2_cb58l")]
+position = Vector2(16, 48)
+
+[node name="Wood4" parent="." instance=ExtResource("2_cb58l")]
+position = Vector2(48, 48)
+
+[node name="Wood5" parent="." instance=ExtResource("2_cb58l")]
+position = Vector2(16, 16)
+
+[node name="Wood6" parent="." instance=ExtResource("2_cb58l")]
+position = Vector2(48, 16)
+
+[node name="Wood9" parent="." instance=ExtResource("2_cb58l")]
+position = Vector2(80, 80)
+
+[node name="Wood10" parent="." instance=ExtResource("2_cb58l")]
+position = Vector2(80, 48)
+
+[node name="Wood11" parent="." instance=ExtResource("2_cb58l")]
+position = Vector2(80, 16)
+
+[node name="Wood7" parent="." instance=ExtResource("2_cb58l")]
+position = Vector2(16, -16)
+
+[node name="Wood8" parent="." instance=ExtResource("2_cb58l")]
+position = Vector2(48, -16)
+
+[node name="Wood12" parent="." instance=ExtResource("2_cb58l")]
+position = Vector2(16, -48)
+
+[node name="Wood13" parent="." instance=ExtResource("2_cb58l")]
+position = Vector2(48, -48)
+
+[node name="Wood14" parent="." instance=ExtResource("2_cb58l")]
+position = Vector2(16, -80)

@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr8oah1m0q8ci"]
+
+[ext_resource type="PackedScene" uid="uid://yeeauou6sjpa" path="res://scenes/objects/metal.tscn" id="1_pceea"]
+[ext_resource type="PackedScene" uid="uid://cxcmhf6oqge8h" path="res://scenes/objects/wood.tscn" id="2_ly3fo"]
+
+[node name="Platform_Flat_Short_1" type="Node2D"]
+
+[node name="Metal" parent="." instance=ExtResource("1_pceea")]
+position = Vector2(-112, 0)
+
+[node name="Metal2" parent="." instance=ExtResource("1_pceea")]
+position = Vector2(-80, 0)
+
+[node name="Metal3" parent="." instance=ExtResource("1_pceea")]
+position = Vector2(-48, 0)
+
+[node name="Metal4" parent="." instance=ExtResource("1_pceea")]
+position = Vector2(-16, 0)
+
+[node name="Metal5" parent="." instance=ExtResource("1_pceea")]
+position = Vector2(16, 0)
+
+[node name="Metal6" parent="." instance=ExtResource("1_pceea")]
+position = Vector2(48, 0)
+
+[node name="Metal7" parent="." instance=ExtResource("1_pceea")]
+position = Vector2(80, 0)
+
+[node name="Metal8" parent="." instance=ExtResource("1_pceea")]
+position = Vector2(112, 0)
+
+[node name="Wood" parent="." instance=ExtResource("2_ly3fo")]
+position = Vector2(-16, -32)
+
+[node name="Wood2" parent="." instance=ExtResource("2_ly3fo")]
+position = Vector2(-16, -64)
+
+[node name="Wood12" parent="." instance=ExtResource("2_ly3fo")]
+position = Vector2(-48, -32)
+
+[node name="Wood13" parent="." instance=ExtResource("2_ly3fo")]
+position = Vector2(-48, -64)
+
+[node name="Wood3" parent="." instance=ExtResource("2_ly3fo")]
+position = Vector2(16, -64)
+
+[node name="Wood4" parent="." instance=ExtResource("2_ly3fo")]
+position = Vector2(16, -32)
+
+[node name="Wood5" parent="." instance=ExtResource("2_ly3fo")]
+position = Vector2(-16, -96)
+
+[node name="Wood6" parent="." instance=ExtResource("2_ly3fo")]
+position = Vector2(-16, -128)
+
+[node name="Wood7" parent="." instance=ExtResource("2_ly3fo")]
+position = Vector2(16, -128)
+
+[node name="Wood8" parent="." instance=ExtResource("2_ly3fo")]
+position = Vector2(16, -96)
+
+[node name="Wood9" parent="." instance=ExtResource("2_ly3fo")]
+position = Vector2(48, -64)
+
+[node name="Wood10" parent="." instance=ExtResource("2_ly3fo")]
+position = Vector2(48, -32)
+
+[node name="Wood11" parent="." instance=ExtResource("2_ly3fo")]
+position = Vector2(48, -96)

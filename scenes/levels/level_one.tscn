@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://bhfaegikif6yj"]
+
+[ext_resource type="PackedScene" uid="uid://fhkwn301ndue" path="res://scenes/levels/game_scene.tscn" id="1_bavij"]
+[ext_resource type="Texture2D" uid="uid://ky5c8iky7yan" path="res://graphics/backgrounds/background.png" id="2_pvche"]
+[ext_resource type="PackedScene" uid="uid://pqo5fhq8nys4" path="res://scenes/characters/link.tscn" id="2_yegm7"]
+[ext_resource type="PackedScene" uid="uid://cnloiy150xw66" path="res://scenes/floor.tscn" id="3_y66qf"]
+[ext_resource type="PackedScene" uid="uid://blvqc8ed6ddp0" path="res://scenes/floor_finite.tscn" id="4_ne5mu"]
+[ext_resource type="PackedScene" uid="uid://dr8oah1m0q8ci" path="res://scenes/objects/platforms/platform_flat_short_1.tscn" id="5_vslu6"]
+[ext_resource type="PackedScene" uid="uid://j3tiecpm8s0m" path="res://scenes/objects/platforms/platform_shape_1.tscn" id="6_i1vje"]
+[ext_resource type="PackedScene" uid="uid://bxtcl4xn58p1m" path="res://scenes/objects/platforms/platform_flat_short_2.tscn" id="7_kuohy"]
+[ext_resource type="PackedScene" uid="uid://j1j1psw7x8ju" path="res://scenes/objects/platforms/platform_flat_long_1.tscn" id="8_uu2lk"]
+
+[node name="LevelOne" instance=ExtResource("1_bavij")]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" index="0"]
+texture_filter = 1
+scale = Vector2(2.6841, 2.25786)
+texture = ExtResource("2_pvche")
+
+[node name="Floor" parent="Floor" index="0"]
+position = Vector2(383, 576)
+
+[node name="Left" parent="Floor" index="1" instance=ExtResource("3_y66qf")]
+position = Vector2(-1278, 4)
+rotation = 1.5708
+
+[node name="Right" parent="Floor" index="2" instance=ExtResource("3_y66qf")]
+position = Vector2(1277, 21)
+rotation = -1.5708
+
+[node name="Ceiling" parent="Floor" index="3" instance=ExtResource("3_y66qf")]
+position = Vector2(1, -717)
+rotation = 3.14159
+
+[node name="FloorUp" parent="Floor" index="4" instance=ExtResource("4_ne5mu")]
+position = Vector2(-829, 441)
+scale = Vector2(50, 1)
+
+[node name="FloorIncline" parent="Floor" index="5" instance=ExtResource("4_ne5mu")]
+position = Vector2(-149, 518)
+rotation = 0.401426
+scale = Vector2(20, 1)
+
+[node name="Metal" type="Node2D" parent="Objects" index="0"]
+metadata/_edit_lock_ = true
+
+[node name="Platform_Flat_Short" parent="Objects/Metal" index="0" instance=ExtResource("5_vslu6")]
+position = Vector2(558, -253)
+
+[node name="Platform_Shape_1" parent="Objects/Metal" index="1" instance=ExtResource("6_i1vje")]
+position = Vector2(785, 208)
+
+[node name="Platform_Flat_Short_2" parent="Objects/Metal" index="2" instance=ExtResource("7_kuohy")]
+position = Vector2(358, 71)
+
+[node name="Platform_Flat_Long_1" parent="Objects/Metal" index="3" instance=ExtResource("8_uu2lk")]
+position = Vector2(-363, 165)
+
+[node name="Wood" type="Node2D" parent="Objects" index="1"]
+metadata/_edit_lock_ = true
+
+[node name="Link" parent="Players" index="0" instance=ExtResource("2_yegm7")]
+position = Vector2(-799, 318)
