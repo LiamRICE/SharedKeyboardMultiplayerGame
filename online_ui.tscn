@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfj50u1evs1yq"]
+
+[ext_resource type="Theme" uid="uid://cf5hptsjw4e53" path="res://scenes/UI/menu_ui.tres" id="1_1t258"]
+[ext_resource type="Script" path="res://multiplayer_controller.gd" id="1_f1gfj"]
+
+[node name="OnlineUI" type="CanvasLayer"]
+script = ExtResource("1_f1gfj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -254.0
+offset_top = -53.5
+offset_right = 254.0
+offset_bottom = 53.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_1t258")
+
+[node name="HostButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+text = "Host"
+
+[node name="JoinButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+text = "Join"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+
+[node name="StartButton" type="Button" parent="VBoxContainer/HBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+text = "Play"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "Username :"
+
+[node name="PlayerNameLineEdit" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+
+[connection signal="button_down" from="VBoxContainer/HBoxContainer/HostButton" to="." method="_on_host_button_button_down"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer/JoinButton" to="." method="_on_join_button_button_down"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer/MarginContainer/StartButton" to="." method="_on_start_button_button_down"]

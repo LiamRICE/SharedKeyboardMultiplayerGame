@@ -1,17 +1,50 @@
-[gd_scene load_steps=4 format=3 uid="uid://pqo5fhq8nys4"]
+[gd_scene load_steps=6 format=3 uid="uid://pqo5fhq8nys4"]
 
 [ext_resource type="PackedScene" uid="uid://dydv6rmimmob6" path="res://scenes/characters/player.tscn" id="1_dvpne"]
+[ext_resource type="Script" path="res://scenes/characters/link.gd" id="2_clgcs"]
 [ext_resource type="Texture2D" uid="uid://i4jfb0ushuvf" path="res://graphics/character/link.png" id="2_uwbje"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_trqu5"]
 height = 48.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brepx"]
+size = Vector2(28, 5)
+
 [node name="Link" instance=ExtResource("1_dvpne")]
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
+script = ExtResource("2_clgcs")
 
 [node name="Sprite2D" parent="." index="0"]
 texture_filter = 1
 texture = ExtResource("2_uwbje")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" parent="." index="1"]
 shape = SubResource("CapsuleShape2D_trqu5")
+metadata/_edit_lock_ = true
+
+[node name="AttackZone" type="Node2D" parent="." index="2"]
+metadata/_edit_lock_ = true
+
+[node name="ShootOrigin" type="Marker2D" parent="AttackZone" index="0"]
+position = Vector2(12.5, -8.5)
+
+[node name="AttackArea2D" type="Area2D" parent="AttackZone" index="1"]
+position = Vector2(25, -3.5)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackZone/AttackArea2D" index="0"]
+shape = SubResource("RectangleShape2D_brepx")
+metadata/_edit_lock_ = true
+
+[node name="AttackTimer" type="Timer" parent="AttackZone" index="2"]
+wait_time = 0.5
+one_shot = true
+
+[node name="AttackCooldownTimer" type="Timer" parent="AttackZone" index="3"]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="body_entered" from="AttackZone/AttackArea2D" to="." method="_on_attack_area_2d_body_entered"]
+[connection signal="timeout" from="AttackZone/AttackTimer" to="." method="_on_attack_timer_timeout"]
+[connection signal="timeout" from="AttackZone/AttackCooldownTimer" to="." method="_on_attack_cooldown_timer_timeout"]

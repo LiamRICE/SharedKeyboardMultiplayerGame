@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://clb8q171jgdu4"]
+
+[ext_resource type="PackedScene" uid="uid://fhkwn301ndue" path="res://scenes/levels/game_scene.tscn" id="1_v81yu"]
+[ext_resource type="Script" path="res://scenes/levels/main_menu.gd" id="2_72047"]
+[ext_resource type="PackedScene" uid="uid://brf0bhyut54fh" path="res://scenes/UI/menu_ui.tscn" id="3_4wo4t"]
+
+[node name="MainMenu" instance=ExtResource("1_v81yu")]
+script = ExtResource("2_72047")
+
+[node name="UI" parent="." index="5"]
+custom_minimum_size = Vector2(0, 0)
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="MenuUI" parent="UI" index="0" instance=ExtResource("3_4wo4t")]
+
+[connection signal="online_game_button" from="UI/MenuUI" to="." method="_on_menu_ui_online_game_button"]
+[connection signal="quit_game_button" from="UI/MenuUI" to="." method="_on_menu_ui_quit_game_button"]
+[connection signal="settings_button" from="UI/MenuUI" to="." method="_on_menu_ui_settings_button"]
+[connection signal="start_game_button" from="UI/MenuUI" to="." method="_on_menu_ui_start_game_button"]

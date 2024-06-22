@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhfaegikif6yj"]
+[gd_scene load_steps=11 format=3 uid="uid://bhfaegikif6yj"]
 
 [ext_resource type="PackedScene" uid="uid://fhkwn301ndue" path="res://scenes/levels/game_scene.tscn" id="1_bavij"]
+[ext_resource type="Script" path="res://scenes/levels/level_one.gd" id="2_dbyx0"]
 [ext_resource type="Texture2D" uid="uid://ky5c8iky7yan" path="res://graphics/backgrounds/background.png" id="2_pvche"]
 [ext_resource type="PackedScene" uid="uid://pqo5fhq8nys4" path="res://scenes/characters/link.tscn" id="2_yegm7"]
 [ext_resource type="PackedScene" uid="uid://cnloiy150xw66" path="res://scenes/floor.tscn" id="3_y66qf"]
@@ -11,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://j1j1psw7x8ju" path="res://scenes/objects/platforms/platform_flat_long_1.tscn" id="8_uu2lk"]
 
 [node name="LevelOne" instance=ExtResource("1_bavij")]
+script = ExtResource("2_dbyx0")
 
 [node name="Sprite2D" type="Sprite2D" parent="Background" index="0"]
 texture_filter = 1
@@ -60,4 +62,5 @@ position = Vector2(-363, 165)
 metadata/_edit_lock_ = true
 
 [node name="Link" parent="Players" index="0" instance=ExtResource("2_yegm7")]
-position = Vector2(-799, 318)
+position = Vector2(-1039, 371)
+slide_on_ceiling = true

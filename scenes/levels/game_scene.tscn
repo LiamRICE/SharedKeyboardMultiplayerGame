@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://fhkwn301ndue"]
+[gd_scene load_steps=3 format=3 uid="uid://fhkwn301ndue"]
 
 [ext_resource type="PackedScene" uid="uid://cnloiy150xw66" path="res://scenes/floor.tscn" id="1_n0xdc"]
+[ext_resource type="Script" path="res://scenes/levels/game_scene.gd" id="1_tytaw"]
 
 [node name="GameScene" type="Node2D"]
+script = ExtResource("1_tytaw")
 metadata/_edit_lock_ = true
+
+[node name="SpawnLocations" type="Node2D" parent="."]
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -21,6 +25,15 @@ metadata/_edit_lock_ = true
 
 [node name="Players" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
+
+[node name="UI" type="Control" parent="."]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.5, 0.5)
