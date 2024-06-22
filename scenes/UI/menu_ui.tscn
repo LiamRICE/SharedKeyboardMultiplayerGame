@@ -42,7 +42,7 @@ layout_mode = 2
 text = "Quit"
 
 [connection signal="quit_game_button" from="." to="." method="_on_quit_game_button"]
-[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/OnlineButton" to="." method="_on_online_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/QuitMarginContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="button_down" from="VBoxContainer/PlayButton" to="." method="_on_play_button_button_down"]
+[connection signal="button_down" from="VBoxContainer/OnlineButton" to="." method="_on_online_button_button_down"]
+[connection signal="button_down" from="VBoxContainer/SettingsButton" to="." method="_on_settings_button_button_down"]
+[connection signal="button_down" from="VBoxContainer/QuitMarginContainer/QuitButton" to="." method="_on_quit_button_button_down"]

@@ -11,9 +11,11 @@
 
 [node name="LevelOneMP" instance=ExtResource("1_12nwl")]
 
-[node name="SpawnLocation1" type="Marker2D" parent="SpawnLocations" index="0" groups=["PlayerSpawnPoint"]]
+[node name="0" type="Marker2D" parent="SpawnLocations" index="0" groups=["PlayerSpawnPoint"]]
+position = Vector2(1093, 434)
 
-[node name="SpawnLocation2" type="Marker2D" parent="SpawnLocations" index="1" groups=["PlayerSpawnPoint"]]
+[node name="1" type="Marker2D" parent="SpawnLocations" index="1" groups=["PlayerSpawnPoint"]]
+position = Vector2(-895, 283)
 
 [node name="Background" parent="." index="1"]
 metadata/_edit_lock_ = true

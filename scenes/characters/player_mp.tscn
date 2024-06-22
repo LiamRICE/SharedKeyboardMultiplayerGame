@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6phhmayt6bl3"]
+
+[ext_resource type="PackedScene" uid="uid://dydv6rmimmob6" path="res://scenes/characters/player.tscn" id="1_hcgfc"]
+[ext_resource type="Script" path="res://scenes/characters/player_mp.gd" id="2_8yd71"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_qeqsr"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[node name="PlayerMP" instance=ExtResource("1_hcgfc")]
+script = ExtResource("2_8yd71")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." index="2"]
+replication_config = SubResource("SceneReplicationConfig_qeqsr")

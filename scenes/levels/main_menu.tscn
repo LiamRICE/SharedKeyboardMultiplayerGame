@@ -7,7 +7,7 @@
 [node name="MainMenu" instance=ExtResource("1_v81yu")]
 script = ExtResource("2_72047")
 
-[node name="UI" parent="." index="5"]
+[node name="UI" parent="." index="6"]
 custom_minimum_size = Vector2(0, 0)
 anchors_preset = 0
 anchor_right = 0.0

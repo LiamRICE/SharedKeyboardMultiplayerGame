@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwyghvohk34p6"]
+
+[ext_resource type="PackedScene" uid="uid://c6phhmayt6bl3" path="res://scenes/characters/player_mp.tscn" id="1_u6e7y"]
+[ext_resource type="Texture2D" uid="uid://i4jfb0ushuvf" path="res://graphics/character/link.png" id="2_y2y3q"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aftp0"]
+height = 48.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fc6vf"]
+size = Vector2(28, 5)
+
+[node name="LinkMP" instance=ExtResource("1_u6e7y")]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_y2y3q")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CapsuleShape2D_aftp0")
+
+[node name="AttackZone" type="Node2D" parent="." index="3"]
+metadata/_edit_lock_ = true
+
+[node name="ShootOrigin" type="Marker2D" parent="AttackZone" index="0"]
+position = Vector2(12.5, -8.5)
+
+[node name="AttackArea2D" type="Area2D" parent="AttackZone" index="1"]
+position = Vector2(25, -3.5)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackZone/AttackArea2D" index="0"]
+shape = SubResource("RectangleShape2D_fc6vf")
+metadata/_edit_lock_ = true
+
+[node name="AttackTimer" type="Timer" parent="AttackZone" index="2"]
+wait_time = 0.5
+one_shot = true
+
+[node name="AttackCooldownTimer" type="Timer" parent="AttackZone" index="3"]
+wait_time = 0.5
+one_shot = true
